@@ -57,8 +57,8 @@ echo "Backup compression completed successfully: $BACKUP_PATH/$BACKUP_FILENAME"
 
 # ---- UPLOAD TO S3 ----
 echo "Uploading $BACKUP_FILENAME to S3..."
-#aws s3 cp "$BACKUP_PATH/$BACKUP_FILENAME"  --endpoint-url="http://s3.thr1.sotoon.ir" "$S3_BUCKET/$BACKUP_FILENAME"
-aws s3 cp "$BACKUP_PATH/$BACKUP_FILENAME"   s3://postgresql-backups --endpoint-url "http://s3.thr1.sotoon.ir/"
+#aws s3 cp "$BACKUP_PATH/$BACKUP_FILENAME"  --endpoint-url="http://s3url.ir" "$S3_BUCKET/$BACKUP_FILENAME"
+aws s3 cp "$BACKUP_PATH/$BACKUP_FILENAME"   s3://postgresql-backups --endpoint-url "url"
 if [ $? -ne 0 ]; then
     echo "Upload to S3 failed."
 
